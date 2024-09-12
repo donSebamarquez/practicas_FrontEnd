@@ -18,8 +18,10 @@ main{
     max-height: 470px;
     margin: auto;
     padding: 20px;
-    position: relative;
-    top: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     border-radius: 20px;
     border: solid 1px black;
     box-shadow: 10px 7px  black;
