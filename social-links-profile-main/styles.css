@@ -71,3 +71,9 @@ h3{
     right: 50%;
     transform: translate(50%,0);
 }
+
+@media (max-width: 375px) {
+    .socials-card {
+      width: 70%;
+    }
+  }
