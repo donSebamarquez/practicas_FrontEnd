@@ -4,17 +4,26 @@
   
   * {
     margin: 0;
+    padding: 0;
   }
   :root{
     --red: hsl(0, 78%, 62%);
     --cyan: hsl(180, 62%, 55%);
     --orange: hsl(34, 97%, 64%);
     --blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
   }
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-  }
+    font-family: 'Poppins';
+    background-color: var(--VeryLightGray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   
   img, picture, video, canvas, svg {
     display: block;
@@ -34,3 +43,58 @@
   }
 
 
+.presentation{
+    width: min(100%,80%);
+}
+    .presentation___content{
+        max-width: 100%;
+    }
+
+        .presentation__title{
+            font-weight: 200;
+            font-size: 1.650rem;
+            color: var(--VeryDarkBlue);
+            text-align: center;
+            margin: 4em 0 0 0;
+        }
+        
+        .presentation__description{
+            font-size: 1rem;
+            color: var(--GrayishBlue);
+            text-align: center;
+            margin:1.8em 0 5em 0;
+        }
+
+    .presentation__features{
+        max-width: 100%;
+    }
+        .features__item{
+            margin: 1.8em auto;
+            padding: 1.2em;
+            border-radius: 7px;
+            box-shadow: 1px 5px 15px var(--GrayishBlue);
+        }
+            .red{
+                border-top: 4px solid var(--red);
+            }
+            .blue{
+                border-top: 4px solid var(--blue);
+            }
+            .cyan{
+                border-top: 4px solid var(--cyan);
+            }
+            .orange{
+                border-top: 4px solid var(--orange);
+            }
+
+            .features__title{
+                color: var(--VeryDarkBlue);
+                padding: 0.385em 0;
+            }
+            .features__description{
+                color: var(--GrayishBlue);
+            }
+            .features__image{
+                margin: 1.2em 0 1.2em auto;
+            }
+@media(min-widht){}
