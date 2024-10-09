@@ -18,11 +18,6 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Poppins';
-    background-color: var(--VeryLightGray);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
   
   img, picture, video, canvas, svg {
@@ -44,15 +39,16 @@
 
 
 .presentation{
-    width: min(100%,80%);
+    background-color: var(--VeryLightGray);
+    font-family: 'Poppins';
 }
-    .presentation___content{
+    .presentation__content{
         max-width: 100%;
     }
 
         .presentation__title{
             font-weight: 200;
-            font-size: 1.650rem;
+            font-size: 1.4rem;
             color: var(--VeryDarkBlue);
             text-align: center;
             margin: 4em 0 0 0;
@@ -66,13 +62,14 @@
         }
 
     .presentation__features{
-        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
     }
         .features__item{
             margin: 1.8em auto;
             padding: 1.2em;
             border-radius: 7px;
-            box-shadow: 1px 5px 15px var(--GrayishBlue);
+            box-shadow: 1px 5px 10px var(--GrayishBlue);
         }
             .red{
                 border-top: 4px solid var(--red);
@@ -97,4 +94,44 @@
             .features__image{
                 margin: 1.2em 0 1.2em auto;
             }
-@media(min-widht){}
+@media(min-width:800px){
+    .presentation__content{
+        max-width:40%;
+        margin: 0 auto;        
+    }
+        .presentation__title{
+            font-size: 1.8rem;
+        }
+
+        .presentation__description{
+            font-size: 0.9rem;
+        }
+ 
+        .presentation__features {
+            max-width: 100%;
+            display: grid;
+            grid-template-areas: 
+                ". red ."
+                "cyan red orange"
+                "cyan blue orange "
+                ". blue .";
+            gap: 2rem;
+        }
+        .features__item{
+            margin: 0 auto;
+        }
+        .red {
+            grid-area: red;
+        }
+        .cyan {
+            grid-area: cyan;
+        }
+        .orange {
+            grid-area: orange;
+        }
+        .blue {
+            grid-area: blue;
+        }
+        
+
+}
