@@ -18,6 +18,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--VeryLightGray);
 }
   
   img, picture, video, canvas, svg {
@@ -39,7 +40,6 @@
 
 
 .presentation{
-    background-color: var(--VeryLightGray);
     font-family: 'Poppins';
 }
     .presentation__content{
@@ -51,7 +51,7 @@
             font-size: 1.4rem;
             color: var(--VeryDarkBlue);
             text-align: center;
-            margin: 4em 0 0 0;
+            margin: 2em 0 0 0;
         }
         
         .presentation__description{
