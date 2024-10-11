@@ -5,6 +5,7 @@
   * {
     margin: 0;
   }
+
   :root{
     --Moderateviolet: hsl(263, 55%, 52%);
     --Verydarkgrayishblue: hsl(217, 19%, 35%);
@@ -13,10 +14,10 @@
     --Lightgray: hsl(0, 0%, 81%);
     --Lightgrayishblue: hsl(210, 46%, 95%);
     
-
   }
+
   body {
-    line-height: 1.2;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: var(--Lightgrayishblue);
     font-family: 'Barlow Semi Condensed';
@@ -50,7 +51,8 @@
             flex-direction: row;
             align-items: center;
             margin: 0 0 1em 0;
-        }    
+        } 
+
             .testimonial__photo{
                 width: 30px;
                 height: 30px;
@@ -67,44 +69,72 @@
                 opacity: 50%;
             }
         
+
         .testimonial__text--primary{
+            line-height: 1.2;
             font-size: 1.125rem;
+            margin: 0 0 1em 0;
+            font-weight: 500;
         }
         
+
         .testimonial__text--secondary{
+            font-size: 0.7rem;
             opacity: 70%;
         }
+
 
         .one{
             grid-area: one;
             background-color: var(--Moderateviolet);
             color: var(--White);
         }
-
+        
+        .one .testimonial__photo{
+            border: 2px solid hsl(263, 75%, 66%);
+        }
+        
+        
         .two{
             grid-area:two;
             background-color:var(--Verydarkgrayishblue);
             color: var(--White);
         }
 
+        
         .three{
             grid-area: three;
             background-color: var(--White);
-            color: var(--Verydarkblackishblue);
+            color: var(--Verydarkgrayishblue);
         }
 
+        
         .four{
             grid-area:four;
             background-color: var(--Verydarkblackishblue);
             color: var(--Lightgray);
         }
-
+        
+            .four .testimonial__photo{
+                    border: 2px solid var(--Moderateviolet);
+                }
+        
+        
         .five{
             grid-area:five;
             background-color: var(--White);
+            color: var(--Verydarkgrayishblue);    
         }
     
-.column{
-    display: flex;
-    flex-direction: column;
+@media(max-width:1024px){
+    .testimonials{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five" 
+        ;   
+    }
 }
