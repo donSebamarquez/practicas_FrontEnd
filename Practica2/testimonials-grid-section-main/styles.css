@@ -1,0 +1,110 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  :root{
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+    
+
+  }
+  body {
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--Lightgrayishblue);
+    font-family: 'Barlow Semi Condensed';
+    font-size: 13px;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas:
+    "one one two five"
+    "three four four five" 
+    ;
+    gap: 2em;
+    width: 80%;
+    margin:50px auto;
+}
+
+    .testimonial__card{
+        border-radius: 10px;
+        padding: 1.8em;
+    }
+        
+        .testimonial__info{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 0 1em 0;
+        }    
+            .testimonial__photo{
+                width: 30px;
+                height: 30px;
+                border-radius: 60%;
+                margin: 0 1em 0 0;
+            }
+
+            .testimonial__name{
+                font-size:0.8rem;
+            }
+
+            .testimonial__type{
+                font-size:0.65rem;
+                opacity: 50%;
+            }
+        
+        .testimonial__text--primary{
+            font-size: 1.125rem;
+        }
+        
+        .testimonial__text--secondary{
+            opacity: 70%;
+        }
+
+        .one{
+            grid-area: one;
+            background-color: var(--Moderateviolet);
+            color: var(--White);
+        }
+
+        .two{
+            grid-area:two;
+            background-color:var(--Verydarkgrayishblue);
+            color: var(--White);
+        }
+
+        .three{
+            grid-area: three;
+            background-color: var(--White);
+            color: var(--Verydarkblackishblue);
+        }
+
+        .four{
+            grid-area:four;
+            background-color: var(--Verydarkblackishblue);
+            color: var(--Lightgray);
+        }
+
+        .five{
+            grid-area:five;
+            background-color: var(--White);
+        }
+    
+.column{
+    display: flex;
+    flex-direction: column;
+}
