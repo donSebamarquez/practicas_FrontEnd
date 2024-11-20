@@ -81,10 +81,13 @@ main{
             .recipe__title{
                 font-family: var(--family-Serif);
                 font-weight: 600;
+                font-size: 2.2rem;
+                margin: 0.5em 0;
             }
 
             .recipe__description{
                 font-size: 0.850rem;
+                margin: 0.5em 0;
             }
 
 
@@ -102,6 +105,10 @@ main{
             .preparation__list{
                 
             }
+                .nonme{
+                    margin: 0.4em;
+                }
+
                 .nonme::marker{
                     color: var(--Rose800);
                 }
@@ -112,13 +119,15 @@ main{
         }
             .ingredients__title{
                 color: var(--Brown800);
+                font-size: 2rem;
             }
             
             .ingredients__list{
-
+                margin: 1em 0 2em 0;
             }
                 
                 .list__values{
+                    margin: 0.2em;
                 }
         
 
@@ -129,14 +138,35 @@ main{
         }
             .instructions__title{
                 color: var(--Brown800);
+                font-size: 2rem;
             }
-            .instructions__list{}
-        
+            .instructions__list{
+            }
+            .instruction__item{
+                margin: 0.65em 0;
+                
+                }
 
 
         
         .card__information{}
-            .information__title{}
+
+            .information__title{
+                color: var(--Brown800);
+                font-size: 2rem;
+            }
+            
             .information__descriptions{}
-            .information__nutrients{}
-                .nutrients{}
+            
+            .information__list{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+                .information__item{
+                    margin: 0.2em 0;
+                    padding: 0 1em;
+                }
+                .brown{
+                    font-weight: 600;
+                    color: var(--Brown800);
+                }
