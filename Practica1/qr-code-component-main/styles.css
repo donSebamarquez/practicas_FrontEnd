@@ -2,41 +2,47 @@ body{
     background-color: hsl(212, 45%, 89%);
     font-family: "Outfit";
 }
-p{
-    color: hsl(216, 15%, 48%);
-    font-size: 14px;
-   font-weight: 300;
-}
-h2{
-    color: hsl(218, 44%, 22%);
-    font-size: 18px;
-    font-weight: 700;
 
-}
-.main-centrar{
+main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 96vh;
-    width: 98vw;
+    height: 100vh;
 }
-.main-qr{
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    width: 250px;
-    height: 400px;
-    max-width: 600px;
-    max-height: 1000px;
-}
-.main-qr img{
-    border-radius: 10px;
-    width: 100%;
-    height: 400px;
-}
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        padding: 10px;
+        width: 20%;
+    }
+
+        .card__img{
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .card__information{
+            text-align: center;
+        }
+            
+            .information__title{
+                color: hsl(218, 44%, 22%);
+                font-size: 1.150rem;
+                font-weight: 700;
+                margin: 0.5em;
+            }
+
+            .information__description{
+                color: hsl(216, 15%, 48%);
+                font-size: 0.9rem;
+                font-weight: 300;
+                width: 95%;
+                padding: 0.5em;
+            }
+
 .attribution{
     position:fixed;
     bottom: 0;
