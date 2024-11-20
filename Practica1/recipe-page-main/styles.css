@@ -1,132 +1,142 @@
 *, *::before, *::after {
     box-sizing: border-box;
-}
-
-* {
+  }
+  
+  * {
     margin: 0;
+  }
+  :root{
+    --White: hsl(0, 0%, 100%);
+    --Stone100: hsl(30, 54%, 90%);
+    --Stone150: hsl(30, 18%, 87%);
+    --Stone600: hsl(30, 10%, 34%);
+    --Stone900: hsl(24, 5%, 18%);
+    --Brown800: hsl(14, 45%, 36%);
+    --Rose800: hsl(332, 51%, 32%);
+    --Rose50: hsl(330, 100%, 98%);
+    --family-Serif:'Young Serif';
+    --family-Outfit:'Outfit';
 }
-
-body {
+  body {
     line-height: 1.5;
-    font-size: 1rem;
-    font-family: "Outfit";
     -webkit-font-smoothing: antialiased;
-    --color-white: hsl(0, 0%, 100%);
-    --color--stone: hsl(30, 54%, 90%);
-    --color-Stone1: hsl(30, 18%, 87%);
-    --color-text: hsl(30, 10%, 34%);
-    --color-Stone3: hsl(24, 5%, 18%);
-    --color-title : hsl(14, 45%, 36%);
-    --color-instruction : hsl(332, 51%, 32%);
-    --color-background : hsl(330, 100%, 98%);
-    --background-color: var(--color-background);
-    color: var(--color-text);
-}
-ol li::marker{
-    color: var(--color-title);
-}
-img, picture, video, canvas, svg {
+    background-color: var(--Stone100);
+    height: 98vh;
+    width: 98vw;
+    font-family: var(--family-Outfit);
+  }
+  
+  img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
-}
-
-input, button, textarea, select {
+  }
+  
+  input, button, textarea, select {
     font: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
-    color: inherit
-}
-
-#root, #__next {
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  #root, #__next {
     isolation: isolate;
-}
-hr{
-    color: var(--color--stone);
-}
-strong{
-    font-family: "Outfit";
-}
-.title{
-    color: var(--color-title);
-    font-family: "Young Serif";
-}
-h1.title{
-    color: var(--color-Stone3);
-    font-size: 2rem;
-    margin: 4% 0;
-    font-weight: 400;
-}
-main {
+  }
+  ol li::marker{
+    color: var(--Brown800);
+  }
+
+  ul li::marker{
+    color: var(--Brown800);
+  }
+
+main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-background);
 }
-section {
-    display: flex;
-    flex-direction: column;
-    width: min(100%,42rem);
-    height: auto;
-    background-color: var(--color-white);
-    padding: 30px;
-    border-radius: 20px;
-    margin: 10%;
-}
-.recipe-image{
-    width: 100%;
-    height: 60%;
-    border-radius: 10px;
-}
-.recipe-info{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    margin: 2% 0;
-    background-color: var(--color-background);
-    border-radius: 5px;
-    padding: 2%;
-    line-height: 2;
-}
-.recipe-info .title{
-    color: var(--color-instruction);
-    font-size: var(--font-general);
-    font-family: "Outfit";
-}
-.recipe-info ul li{
-    font-size: 0.9rem;
-    padding: 0 2%;
-}
-.recipe-values{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-.presentations p{
-    margin: 3% 0;
-    font-size: 0.9rem;
-}
-.recipe-ingredients{
-    margin: 5% 0;
-}
-.recipe-ingredients li{
-    padding: 0 4%;
-    margin: 2% 0;
-}
-.recipe-instructions p{
-    padding: 0 0 0 5%;
-    margin: 3% 0;
-    font-size: 0.9rem;
-}
+    .card{
+        width: min(80%,42rem);
+        padding: 2em;
+        background-color: var(--White);
+        border-radius: 10px;
+    }
 
-.recipe-valores{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-.recipe-nutrientes{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between ;
-    margin: 2% 0;
-}
+        .card__recipe{
+        }
+
+            .recipe__img{
+                border-radius: 10px;
+                width: 90%;
+            }
+
+            .recipe__title{
+                font-family: var(--family-Serif);
+                font-weight: 600;
+            }
+
+            .recipe__description{
+                font-size: 0.850rem;
+            }
+
+
+
+
+        .card__preparation{
+            background-color: var(--Rose50);
+            padding: 0.8em 0 0.8em 0.8em;
+        }
+
+            .preparation__title{
+                color: var(--Rose800);
+            }
+
+            .preparation__list{
+                
+            }
+                .nonme::marker{
+                    color: var(--Rose800);
+                }
+
+
+
+        .card__ingredients{
+        }
+            .ingredients__title{
+                color: var(--Brown800);
+            }
+            
+            .ingredients__list{
+
+            }
+                
+                .list__values{
+                }
+        
+
+
+
+        .card__instructions{
+
+        }
+            .instructions__title{
+                color: var(--Brown800);
+            }
+            .instructions__list{}
+        
+
+
+        
+        .card__information{}
+            .information__title{}
+            .information__descriptions{}
+            .information__nutrients{}
+                .nutrients{}
