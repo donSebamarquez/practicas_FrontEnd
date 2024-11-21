@@ -63,6 +63,7 @@ main{
     justify-content: center;
     align-items: center;
 }
+
     .card{
         width: min(80%,42rem);
         padding: 2em;
@@ -71,11 +72,12 @@ main{
     }
 
         .card__recipe{
+          margin: 1em;
         }
 
             .recipe__img{
                 border-radius: 10px;
-                width: 90%;
+                width: 100%;
             }
 
             .recipe__title{
@@ -96,6 +98,7 @@ main{
         .card__preparation{
             background-color: var(--Rose50);
             padding: 0.8em 0 0.8em 0.8em;
+            margin: 1em;
         }
 
             .preparation__title{
@@ -105,17 +108,18 @@ main{
             .preparation__list{
                 
             }
-                .nonme{
-                    margin: 0.4em;
-                }
-
-                .nonme::marker{
-                    color: var(--Rose800);
-                }
-
-
-
+              .preparation__item{
+                margin: 0.4em;
+              }
+              .preparation__item::marker{
+                color: var(--Rose800);
+              }
+              
+              
+              
+             
         .card__ingredients{
+          margin: 1em;
         }
             .ingredients__title{
                 color: var(--Brown800);
@@ -129,43 +133,61 @@ main{
                 .list__values{
                     margin: 0.2em;
                 }
+
+                .ingredients_item{
+                  margin: 0.4em;
+                }
+
+                .ingredients_item::marker{
+                  color: var(--Rose800);
+                }
         
 
 
 
         .card__instructions{
-
+          margin: 1em;
         }
+        
             .instructions__title{
                 color: var(--Brown800);
                 font-size: 2rem;
             }
+
             .instructions__list{
             }
+
             .instruction__item{
                 margin: 0.65em 0;
-                
                 }
 
 
-        
-        .card__information{}
+
+
+        .card__information{
+          margin: 1em;
+        }
 
             .information__title{
                 color: var(--Brown800);
                 font-size: 2rem;
             }
             
-            .information__descriptions{}
+            .information__descriptions{
+              font-size: 0.85rem;
+            }
             
             .information__list{
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
             }
+
                 .information__item{
                     margin: 0.2em 0;
                     padding: 0 1em;
+                    border-bottom: solid 1px var(--Stone600);
                 }
+
                 .brown{
                     font-weight: 600;
                     color: var(--Brown800);
