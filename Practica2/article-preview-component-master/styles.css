@@ -20,6 +20,11 @@
     -webkit-font-smoothing: antialiased;
     background-color: var(--bgColor);
     font-family: 'Manrope';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
   
@@ -59,13 +64,14 @@
   display: flex;
   flex-direction: row;
   margin: auto 0;
+  position: relative;
 }
 
   .card{
     width: min(80vw,800px);
     display: flex;
     flex-direction: column;
-    margin: 2em auto;
+    margin: 0 auto;
     border-radius: 10px;
     background-color: white;
     }
@@ -99,6 +105,7 @@
     .card__user{
         display: flex;
         flex-direction: row;
+        width: 100%;
         margin: 1em;
     }
 
@@ -118,7 +125,8 @@
         }
     
     .card__btn{
-        width: 15%;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         background-color: var(--bgColor);
         color: var(--ShareDiv);
@@ -128,7 +136,7 @@
     }
       .active{
         background-color: var(--ShareButton);
-        color: var(--ShareDiv);
+        color: white;
       }
 
     .card__icons{
@@ -143,4 +151,28 @@
       display: none;
     }
 
-  @mediaq
+    .fa-brands{
+      color: white;
+    }
+
+
+    @media (min-width: 500px){
+      .card{
+        flex-direction: row;
+      }
+      
+      .card__title{
+        font-size: 1.350rem;
+      }
+      
+      .card__text{
+        font-size: 0.9rem;
+      }
+
+      .card__icons{
+        width: 50%;
+        position: relative;
+        bottom: 65px;
+        left: 150px;
+      }
+    }
