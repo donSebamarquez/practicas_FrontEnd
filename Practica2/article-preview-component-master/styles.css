@@ -55,6 +55,11 @@
     flex-direction: column;
     margin: auto 0;
 }
+.row{
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+}
 
   .card{
     width: min(80vw,800px);
@@ -95,12 +100,12 @@
         display: flex;
         flex-direction: row;
         margin: 1em;
-        
     }
 
         .user__img{
             width: 15%;
             border-radius: 50%;
+            margin: 0 1em 0 0;
         }
         
         .user__name{
@@ -113,20 +118,29 @@
         }
     
     .card__btn{
+        width: 15%;
         border-radius: 50%;
         background-color: var(--bgColor);
         color: var(--ShareDiv);
         border: none;
         cursor: pointer;
+        margin: 0 0.3em;
     }
-        .active{
-            color: white;
-            background-color: var(--ShareDiv);
-        }
+      .active{
+        background-color: var(--ShareButton);
+        color: var(--ShareDiv);
+      }
 
-
-
-
-    .card__share{
-        display: none;
+    .card__icons{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      background-color: var(--ShareButton);
+      z-index: 1;
     }
+    
+    .deactivate{
+      display: none;
+    }
+
+  @mediaq
