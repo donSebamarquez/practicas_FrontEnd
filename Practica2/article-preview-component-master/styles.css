@@ -1,0 +1,132 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  
+  * {
+    margin: 0;
+  }
+  :root{
+    --ShareDiv: hsl(217, 19%, 35%);
+    --ShareButton: hsl(214, 17%, 51%);
+    --grayBlue:hsl(212, 23%, 69%);
+    --bgColor:hsl(210, 46%, 95%);
+  }
+  body {
+    
+    line-height: 1.5;
+  
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--bgColor);
+    font-family: 'Manrope';
+  }
+  
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+.column{
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+  .card{
+    width: min(80vw,800px);
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+    border-radius: 10px;
+    background-color: white;
+    }
+
+
+    .card__img{
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    
+
+    .card__title{
+        margin: 1em;
+        font-weight: 500;
+        font-size: 0.950rem;
+    }
+    
+
+    .card__text{
+        margin: 1em;
+        font-weight: 300;
+        color: var(--ShareDiv);
+        font-size: 0.750rem;
+    }
+
+
+
+
+
+
+    .card__user{
+        display: flex;
+        flex-direction: row;
+        margin: 1em;
+        
+    }
+
+        .user__img{
+            width: 15%;
+            border-radius: 50%;
+        }
+        
+        .user__name{
+            font-size: 0.9rem;
+        }
+        
+        .user__published{
+            font-size: 0.850rem;
+            color: var(--grayBlue);
+        }
+    
+    .card__btn{
+        border-radius: 50%;
+        background-color: var(--bgColor);
+        color: var(--ShareDiv);
+        border: none;
+        cursor: pointer;
+    }
+        .active{
+            color: white;
+            background-color: var(--ShareDiv);
+        }
+
+
+
+
+    .card__share{
+        display: none;
+    }
