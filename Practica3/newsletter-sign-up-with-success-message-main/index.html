@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/7dd75d41c9.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="card">
+    <!-- Sign-up form start -->
+    <div class="card__primary" id="primary">
+
+      <h1 class="primary__title">Stay updated!</h1>
+  
+      <p class="primary__">Join 60,000+ product managers receiving monthly updates on:</p>
+      <div class="column">
+
+        <p><i class="fa-solid fa-check"></i>Product discovery and building what matters</p>
+        <p><i class="fa-solid fa-check"></i>Measuring to ensure updates are a success</p>
+        <p><i class="fa-solid fa-check"></i>And much more!</p>
+      
+      </div>
+
+      <form class="primary__form column" id="form">
+        
+        <label class="form__label" for="email">Email address</label>
+        <span  class="form__err deactivate" id="err_msg">Valid email required</span>
+        <input id="input" class="form__input" id="email" placeholder = "email@company.com">
+        <button id="suscribirse" class="btn form">Subscribe to monthly newsletter</button>
+
+      </form>
+  
+      <!-- Sign-up form end -->
+    </div>
+
+    <div class="card__secondary deactivate" id="secondary">
+      <!-- Success message start -->
+      <h2>Thanks for subscribing!</h2>
+  
+      <p>
+        A confirmation email has been sent to <span id="userEmail"></span>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+  
+      <button class="btn" id="return">Dismiss message</button>
+    <!-- Success message end -->
+
+    </div>
+    
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/sebamarques">Sebastián Márquez</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

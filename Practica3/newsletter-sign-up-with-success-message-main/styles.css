@@ -1,0 +1,88 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  
+  * {
+    margin: 0;
+  }
+  :root{
+    --Tomato: hsl(4, 100%, 67%);
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+  }
+
+  body {
+  
+    line-height: 1.5;
+    
+    -webkit-font-smoothing: antialiased;
+  
+    font-family: 'Roboto';
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--CharcoalGrey);
+}
+  
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .deactivate{
+    display: none;
+  }
+
+  .card{
+    width: min(60%,500px);
+    background-color: white;
+    border-radius: 1.6em;
+}
+
+  .card__primary{
+    padding: 4em 2em;
+ 
+
+  }
+
+  .card__secondary{
+   
+  }
