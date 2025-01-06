@@ -23,40 +23,54 @@
   <main class="card">
     <!-- Sign-up form start -->
     <div class="card__primary" id="primary">
-
-      <h1 class="primary__title">Stay updated!</h1>
-  
-      <p class="primary__">Join 60,000+ product managers receiving monthly updates on:</p>
-      <div class="column">
-
-        <p><i class="fa-solid fa-check"></i>Product discovery and building what matters</p>
-        <p><i class="fa-solid fa-check"></i>Measuring to ensure updates are a success</p>
-        <p><i class="fa-solid fa-check"></i>And much more!</p>
-      
-      </div>
-
-      <form class="primary__form column" id="form">
+        <div>
+            <h1 class="primary__title">Stay updated!</h1>
         
-        <label class="form__label" for="email">Email address</label>
-        <span  class="form__err deactivate" id="err_msg">Valid email required</span>
-        <input id="input" class="form__input" id="email" placeholder = "email@company.com">
-        <button id="suscribirse" class="btn form">Subscribe to monthly newsletter</button>
-
-      </form>
-  
-      <!-- Sign-up form end -->
+            <p class="primary__description">Join 60,000+ product managers receiving monthly updates on:</p>
+            <div class="column">
+      
+              <div class="row">
+                  <i class="fa-solid fa-check"></i><p class="primary__point">Product discovery and building what matters</p>
+              </div>
+              <div class="row">
+                  <i class="fa-solid fa-check"></i><p class="primary__point">Measuring to ensure updates are a success</p>
+              </div>
+              <div class="row">
+                  <i class="fa-solid fa-check"></i><p class="primary__point">And much more!</p>
+              </div>
+            
+            </div>
+      
+            <form class="primary__form column" id="form">
+              
+              <div class="row space">
+                  <label class="form__label" for="email">Email address</label>
+                  <span  class="form__err deactivate" id="err_msg">Valid email required</span>
+              </div>
+              <input id="input" class="form__input" id="email" placeholder = "email@company.com">
+              <button id="suscribirse" class="btn">Subscribe to monthly newsletter</button>
+      
+            </form>
+            <!-- Sign-up form end -->
+        </div>
+        <div >
+            <img class="primary__img" src="./assets/images/grafica.jpg">
+        </div>
     </div>
 
-    <div class="card__secondary deactivate" id="secondary">
+    <div class=" deactivate" id="secondary">
       <!-- Success message start -->
-      <h2>Thanks for subscribing!</h2>
-  
-      <p>
-        A confirmation email has been sent to <span id="userEmail"></span>. 
-        Please open it and click the button inside to confirm your subscription.
-      </p>
-  
-      <button class="btn" id="return">Dismiss message</button>
+      <div class="column secondary__group">
+          <i class="fa-solid fa-check big"></i>
+          <h2 class="secondary__title">Thanks for subscribing!</h2>
+      
+          <p class="secondary__information">
+            A confirmation email has been sent to <strong id="userEmail"></strong>. 
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+      
+          <button class="btn" id="return">Dismiss message</button>
+      </div>
     <!-- Success message end -->
 
     </div>
