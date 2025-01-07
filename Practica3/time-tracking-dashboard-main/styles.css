@@ -1,0 +1,109 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--Verydarkblue);
+    }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+  :root{
+    --Blue: hsl(246, 80%, 60%);
+    --Lightred: hsl(15, 100%, 70%);
+    --Softblue: hsl(195, 74%, 62%);
+    --Lightred: hsl(348, 100%, 68%);
+    --Limegreen: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Softorange: hsl(43, 84%, 65%);
+
+    --Verydarkblue: hsl(226, 43%, 10%);
+    --Darkblue: hsl(235, 46%, 20%);
+    --Desaturatedblue: hsl(235, 45%, 61%);
+    --PaleBlue: hsl(236, 100%, 87%);
+    font-family: 'Rubik';
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn{
+    color: var(--Desaturatedblue);
+    background: none;
+    border: none;
+    transition: 0.4s all ease;
+    }
+  .btn:hover{
+    color: white;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+    .card__user{
+        background-color:var(--Blue);
+        width: 70%;
+        border-radius: 1em;
+    }
+        .user__img{
+            width: 15%;
+            height: 15%;
+            border:2px solid white ;
+            border-radius: 50%;
+        }
+
+        .user__buttons{
+            width: 70%;
+            padding: 0.5em;
+            display: flex;
+            background-color: var(--Darkblue);
+            border-radius: 1em;
+        }
+
+
+
+
+    .card__pendejos{
+        display: flex;
+        flex-direction: column;
+    }
+        .card__values{
+
+        }
