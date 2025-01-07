@@ -1,101 +1,106 @@
 [
   {
+    "id":"one",
     "title": "Work",
     "timeframes": {
-      "daily": {
+      "day": {
         "current": 5,
         "previous": 7
       },
-      "weekly": {
+      "week": {
         "current": 32,
         "previous": 36
       },
-      "monthly": {
+      "month": {
         "current": 103,
         "previous": 128
       }
     }
   },
-  {
+  { "id":"two",
     "title": "Play",
     "timeframes": {
-      "daily": {
+      "day": {
         "current": 1,
         "previous": 2
       },
-      "weekly": {
+      "week": {
         "current": 10,
         "previous": 8
       },
-      "monthly": {
+      "month": {
         "current": 23,
         "previous": 29
       }
     }
   },
   {
+    "id":"three",
     "title": "Study",
     "timeframes": {
-      "daily": {
+      "day": {
         "current": 0,
         "previous": 1
       },
-      "weekly": {
+      "week": {
         "current": 4,
         "previous": 7
       },
-      "monthly": {
+      "month": {
         "current": 13,
         "previous": 19
       }
     }
   },
   {
+    "id":"four",
     "title": "Exercise",
     "timeframes": {
-      "daily": {
+      "day": {
         "current": 1,
         "previous": 1
       },
-      "weekly": {
+      "week": {
         "current": 4,
         "previous": 5
       },
-      "monthly": {
+      "month": {
         "current": 11,
         "previous": 18
       }
     }
   },
   {
+    "id":"five",
     "title": "Social",
     "timeframes": {
-      "daily": {
+      "day": {
         "current": 1,
         "previous": 3
       },
-      "weekly": {
+      "week": {
         "current": 5,
         "previous": 10
       },
-      "monthly": {
+      "month": {
         "current": 21,
         "previous": 23
       }
     }
   },
   {
+    "id":"six",
     "title": "Self Care",
     "timeframes": {
-      "daily": {
+      "day": {
         "current": 0,
         "previous": 1
       },
-      "weekly": {
+      "week": {
         "current": 2,
         "previous": 2
       },
-      "monthly": {
+      "month": {
         "current": 7,
         "previous": 11
       }
