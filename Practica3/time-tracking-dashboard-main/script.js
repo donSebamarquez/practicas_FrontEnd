@@ -2,7 +2,7 @@ let values = [];
 let mostrarValores = document.getElementById("planillaSeleccionada")
 let valoresSeleccionados = ``;
 
-let valoresTraidos = fetch("http://192.168.1.11:5500/Practica3/time-tracking-dashboard-main/data.json")
+let valoresTraidos = fetch("https://raw.githubusercontent.com/sebamarques/practicas_FrontEnd/refs/heads/main/Practica3/time-tracking-dashboard-main/data.json")
 .then(response => response.json())
 .then(data => {
     values = data
