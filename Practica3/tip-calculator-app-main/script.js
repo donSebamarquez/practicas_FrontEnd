@@ -13,67 +13,68 @@ let clientsValue = 0;
 let totalToPay = 0;
 let totalTip = 0;
 
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function () {
 
-    billToPay.addEventListener("input",function(){
+    billToPay.addEventListener("input", function () {
         calculateTip();
-    })
+    });
 
-    customTip.addEventListener("input",function(){
+    customTip.addEventListener("input", function () {
         tipValue = parseFloat(customTip.value) || 0;
-        calculateTip()
-    })
+        tipButtons.forEach(btn => btn.classList.remove('active'));
+        calculateTip();
+    });
 
-    numberOfClients.addEventListener("input",function(){
-        calculateTip()
-    })
+    numberOfClients.addEventListener("input", function () {
+        calculateTip();
+    });
 
-    tipButtons.forEach(button=>{
-        button.addEventListener("click",function(event){
-
+    tipButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            tipButtons.forEach(btn => btn.classList.remove('active')); 
+            button.classList.add('active');
             event.preventDefault();
             tipValue = parseFloat(button.getAttribute("data-tip"));
-            customTip.value = "";
-            calculateTip();
-        })
-    })
-    rstbtn.addEventListener("click",reset)
-})
+            customTip.value = "";  
+            calculateTip();  
+        });
+    });
 
-function calculateTip(){
+    rstbtn.addEventListener("click", reset);
+});
 
-    billValue = parseFloat(billToPay.value) | 0;
-    clientsValue = parseInt(numberOfClients.value) | 1;
-    
-    totalTip = (billValue * tipValue / 100)
-    totalToPay = (totalTip + billValue) / clientsValue;
+function calculateTip() {
+    billValue = parseFloat(billToPay.value) || 0;
+    clientsValue = parseInt(numberOfClients.value) || 1;
+
+    totalTip = (billValue * tipValue / 100) / clientsValue;
+    totalToPay = (billValue / clientsValue) + totalTip;
 
     updateUi();
 }
 
-function updateUi(){
-
-    if(billValue && clientsValue && tipValue){
-        
-        tipAmountElement.textContent = `$${(totalTip / clientsValue).toFixed(2)}`;
-        totalAmountElement.textContent = `$${(totalToPay).toFixed(2)}`;
+function updateUi() {
+    if (billValue && clientsValue && tipValue) {
+        tipAmountElement.textContent = `$${(totalTip.toFixed(2))}`;
+        totalAmountElement.textContent = `$${(totalToPay.toFixed(2))}`;
         
         rstbtn.disabled = false;
-    }
-    else{
+        rstbtn.classList.add("click");
+    } else {
         rstbtn.disabled = true;
+        rstbtn.classList.remove("click");
     }
-
 }
 
-function reset(){
+function reset() {
     billToPay.value = "";
     customTip.value = "";
     numberOfClients.value = "";
-    
+
     tipAmountElement.textContent = "$0.00";
     totalAmountElement.textContent = "$0.00";
 
+    tipButtons.forEach(btn => btn.classList.remove('active'));
     rstbtn.disabled = true;
 
     calculateTip();

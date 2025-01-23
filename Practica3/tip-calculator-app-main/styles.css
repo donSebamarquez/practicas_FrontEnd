@@ -1,122 +1,275 @@
-
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  :root{
-    
-    --Strongcyan: hsl(172, 67%, 45%);
-    --Verydarkcyan: hsl(183, 100%, 15%);
-    --Darkgrayishcyan: hsl(186, 14%, 43%);
-    --Grayishcyan: hsl(184, 14%, 56%);
-    --Lightgrayishcyan: hsl(185, 41%, 84%);
-    --Verylightgrayishcyan: hsl(189, 41%, 97%);
-    --White: hsl(0, 0%, 100%);
-  }
-  
-  *{
-    margin: 0;
-  }
-  
-  body {
-    
-    font-family: 'space mono';
-
-    line-height: 1.5;
-    
-    -webkit-font-smoothing: antialiased;
-
-    background-color: var(--Lightgrayishcyan);
-    
-  }
-  
-  
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
-  
-  #root, #__next {
-    isolation: isolate;
-  }
-
-  .column{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form__input{
-    text-align: end;
-    background-color: var(--Verylightgrayishcyan);
-    color: var(--Verydarkcyan);
-    border: none;
-    border-radius: 5px;
-    
+    html, body {
+        height: 100%;
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        margin: 0;               
     }
 
-    .form__input::placeholder{
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --Strongcyan: hsl(172, 67%, 45%);
+        --Verydarkcyan: hsl(183, 100%, 15%);
+        --Darkgrayishcyan: hsl(186, 14%, 43%);
+        --Grayishcyan: hsl(184, 14%, 56%);
+        --Lightgrayishcyan: hsl(185, 41%, 84%);
+        --Verylightgrayishcyan: hsl(189, 41%, 97%);
+        --White: hsl(0, 0%, 100%);
+    }
+
+    * {
+        margin: 0;
+    }
+
+    body {
+        font-family: 'space mono';
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        background-color: var(--Lightgrayishcyan);
+    }
+
+    img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    input, button, textarea, select {
+        font: inherit;
+    }
+
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+
+    p {
+        text-wrap: pretty;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-wrap: balance;
+    }
+
+    #root, #__next {
+        isolation: isolate;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .click {
+        cursor: pointer;
+        font-weight: 900;
+    }
+
+    .click:hover {
+        background-color: hsl(172, 100%, 72%);
         color: var(--Verydarkcyan);
     }
 
-  .card{
-    width: min(60%,80vw);
-    background-color: var(--White);
-    border-radius: 1.5em;
-    margin: 0 auto;
-    padding: 2em;
-}
-    .card__form{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
+    .form__input {
+        width: 100%;
+        text-align: end;
+        font-size: 1rem;
+        font-weight: 800;
+        background-color: var(--Verylightgrayishcyan);
+        color: var(--Verydarkcyan);
+        border: none;
+        border-radius: 5px;
+        padding: 0.4em;
     }
 
-    .form__tip{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 0.5em;
+    .form__input::placeholder {
+        color: var(--Grayishcyan);
     }
-        .tip__btn{
-            width: 90%;
-            color: var(--White);
-            background-color: var(--Verydarkcyan);
-            border: none;
-            border-radius: 4px;
-            padding: 0.4em 0;
-        }
-        
-        .tip__input{
-            background-color: var(--Verylightgrayishcyan);
-            color: var(--Verydarkcyan);
-            text-align: center;
-            width: 60px;
-            border: none;
-            border-radius: 10px;
-        }
-        .tip__input::placeholder{
-            color: var(--Verydarkcyan);
-        }
-    
-    
-    
-    .card__bill{
-        background-color: var(--Verydarkcyan);
-        border-radius: 1em;
+
+    .form__input:focus {
+        border: 2px solid var(--Strongcyan);
+        outline: none;
     }
+
+
+
+
+
+    .card {
+        width: min(60%, 80vw);
+        background-color: var(--White);
+        border-radius: 1.5em;
+        padding: 2em;
+    }
+
+        .card__form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+            .card__spread {
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                margin: 0 2.5em;
+            }
+
+                .form__bill {
+                    align-self: center;
+                }
+
+                    .bill__title {
+                        color: var(--Darkgrayishcyan);
+                        font-size: 1rem;
+                    }
+
+                .form__title {
+                    font-size: 1rem;
+                    margin: 1rem 0;
+                    color: var(--Darkgrayishcyan);
+                }
+
+                .form__tip {
+                    align-self: flex-start;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 0.5em;
+                }
+
+                    .tip__btn {
+                        width: 100%;
+                        color: var(--White);
+                        background-color: var(--Verydarkcyan);
+                        border: none;
+                        border-radius: 4px;
+                        padding: 0.4em 0;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+
+                    .tip__btn:hover {
+                        color: var(--Verydarkcyan);
+                        background-color: var(--Lightgrayishcyan);
+                        font-weight: 600;
+                    }
+
+                    .active {
+                        background-color: var(--Lightgrayishcyan);
+                        color: var(--Verydarkcyan);
+                        font-weight: 600;
+                    }
+
+                    .tip__input {
+                        background-color: var(--Verylightgrayishcyan);
+                        color: var(--Verydarkcyan);
+                        text-align: center;
+                        width: 100%;
+                        border: none;
+                        border-radius: 5px;
+                    }
+
+                    .tip__input::placeholder {
+                        color: var(--Darkgrayishcyan);
+                        font-weight: 900;
+                    }
+
+
+
+
+
+                                
+            .card__bill {
+                background-color: var(--Verydarkcyan);
+                border-radius: 1em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2em 2.4em;
+                justify-content: space-between;
+            }
+
+                .card__person {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0 0 2em 0;
+                }
+
+                    .person__separation {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .person__top {
+                        color: var(--White);
+                        font-size: 1rem;
+                    }
+
+                    .person__sub {
+                        color: var(--Grayishcyan);
+                        font-size: 0.6rem;
+                    }
+
+                    .person__price {
+                        font-size: 2.5rem;
+                        font-weight: 900;
+                        color: var(--Strongcyan);
+                    }
+
+                    .btn__reset {
+                        margin-top: auto;
+                        border: none;
+                        border-radius: 5px;
+                        width: 100%;
+                        padding: 0.4em 0;
+                        background-color: hsl(183, 60%, 27%);
+                        text-transform: uppercase;
+                        transition: all 0.3s ease;
+                    }
+
+
+
+
+
+@media(max-width: 900px) {
+    .card {
+        background-color: var(--White);
+        border-radius: 1.5em;
+        margin: 0 auto;
+        padding: 2em;
+    }
+
+        .card__form {
+            grid-template-columns: 1fr;
+        }
+
+            .form__tip {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .person__price {
+                font-size: 1.8rem;
+            }
+}
+
+@media(max-width: 500px) {
+    .card {
+        width: 90%;
+    }
+
+        .person__price {
+            font-size: 1rem;
+        }
+
+        .form__bill {
+            margin-top: 1.5em; 
+        }
+}
