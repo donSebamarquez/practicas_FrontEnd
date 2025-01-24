@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7dd75d41c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="card">
+
+        <section class="card__input">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h1 class="input__title">How did we do?</h1>
+          
+            <p class="input__description">
+                Please let us know how we did with your support request. All feedback is appreciated 
+                to help us improve our offering!
+            </p>
+            <div class="input__buttons">
+
+                <button class="btn__value">1</button>
+                <button class="btn__value">2</button>
+                <button class="btn__value">3</button>
+                <button class="btn__value">4</button>
+                <button class="btn__value">5</button>
+
+            </div>
+          
+            <button class="btn__submit">Submit</button>
+
+        </section>
+      
+        <section class="card__output disable">
+
+            <p class="output__selection">You selected <p class="output__value"></p>out of 5</p>
+          
+            <h2 class="output__title">Thank you!</h2>
+          
+            <p class="output__description">
+                We appreciate you taking the time to give a rating. If you ever need more support, 
+                don’t hesitate to get in touch!
+            </p>
+
+        </section>
+
+        
+    </main>
+    
+
+  <script src="script.js"></script>
+</body>
+</html>

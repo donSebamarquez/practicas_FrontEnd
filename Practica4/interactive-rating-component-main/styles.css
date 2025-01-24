@@ -1,0 +1,176 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  
+  *{
+    margin: 0;
+  }
+  
+  :root{
+    
+
+    --Orange: hsl(25, 97%, 53%);
+
+
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+  }
+
+  body {
+    
+    line-height: 1.5;
+    
+    -webkit-font-smoothing: antialiased;
+    
+    background-color: var(--VeryDarkBlue);
+    font-family: 'Overpass';
+
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+  
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  
+  p {
+    text-wrap: pretty;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .disable{
+    display: none;
+  }
+  .fa-star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Orange);
+    background-color: hsl(211, 19%, 22%);
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin: 1.5em 0 2em 1em;
+}
+  
+
+
+
+
+  .card{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    background-color: var(--DarkBlue);
+    border-radius: 1em;
+}
+
+        .card__input{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 1.5em;
+        }
+            .input__title{
+                color: var(--White);
+                font-size: 1.5rem;
+            }
+
+            .input__description{
+                color: var(--LightGrey);
+                font-size: 0.9rem;
+                margin: 1em 0;
+            }
+
+            .input__buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 0 1.5em 0;
+            }
+                .btn__value{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: none;
+                    color: var(--LightGrey);
+                    background-color: hsl(213, 16%, 13%);
+                    transition: all 0.4s ease;
+                    cursor: pointer;
+                }
+                .btn__value:hover{
+                    background-color: var(--Orange);
+                    color: var(--DarkBlue);
+                }
+                    .active{
+                        background-color: var(--White);
+                    }
+
+                .btn__submit{
+                    width: 100%;
+                    background-color: var(--Orange);
+                    border-radius: 1.6em;
+                    border: none;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    padding: 0.6em 0;
+                    transition: all 0.4s ease;
+                    cursor: pointer;
+                }
+                .btn__submit:hover{
+                    background-color: var(--White);
+                }
+        
+
+
+
+        .card__output{
+
+        }
+            .output__selection{
+
+            }
+
+                .output__value{
+
+                }
+
+            .output__title{
+
+            }
+
+            .output__description{
+                
+            }
