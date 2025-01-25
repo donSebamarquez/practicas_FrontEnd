@@ -23,9 +23,9 @@
     <main class="card">
 
         <section class="card__input">
-
-            <i class="fa-solid fa-star"></i>
-
+            <div class="input__image-container">
+                <img class="input__image" src="./images/icon-star.svg" alt="star icon">
+              </div>
             <h1 class="input__title">How did we do?</h1>
           
             <p class="input__description">
@@ -34,11 +34,11 @@
             </p>
             <div class="input__buttons">
 
-                <button class="btn__value">1</button>
-                <button class="btn__value">2</button>
-                <button class="btn__value">3</button>
-                <button class="btn__value">4</button>
-                <button class="btn__value">5</button>
+                <button data-value="1" class="btn__value">1</button>
+                <button data-value="2" class="btn__value">2</button>
+                <button data-value="3" class="btn__value">3</button>
+                <button data-value="4" class="btn__value">4</button>
+                <button data-value="5" class="btn__value">5</button>
 
             </div>
           
@@ -47,8 +47,12 @@
         </section>
       
         <section class="card__output disable">
+            
+            <img class="output__image" src="./images/illustration-thank-you.svg">
 
-            <p class="output__selection">You selected <p class="output__value"></p>out of 5</p>
+            <div class="output__selection">
+                <p>You selected <p class="output__value"></p> out of 5</p>
+            </div>
           
             <h2 class="output__title">Thank you!</h2>
           
