@@ -202,3 +202,8 @@
     .disable{
         display: none;
         }
+@media(max-width: 500px){
+    .card{
+        width: 80%;
+    }
+}
