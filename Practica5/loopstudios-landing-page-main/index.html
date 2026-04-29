@@ -8,48 +8,62 @@
   
   <title>Frontend Mentor | Loopstudios landing page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body>
 
-    <header class="grid">
+    <header class="relative">
 
-                <picture class="col-start-1 row-start-1 ">
-                    <source srcset="./images/desktop/image-hero.jpg" media="(min-width:768px)">
-                    <img class="w-full object-cover" src="./images/mobile/image-hero.jpg">
-                </picture>
+        <picture>
+            <source srcset="./images/desktop/image-hero.jpg" media="(min-width:768px)">
+            <img src="./images/mobile/image-hero.jpg" class="w-full h-[500px] md:h-[650px] object-cover" alt="">
+        </picture>
 
-                <div class="col-start-1 row-start-1 bg-black/40"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
 
-                <div class="col-start-1 row-start-1 text-white p-6">
-                    <nav class="flex justify-between">
-                        <img src="./images/logo.svg">
-                        <ul class="flex gap-6">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Products</a></li>
-                            <li><a href="#">Support</a></li>
-                        </ul>
-                    </nav>
-            
-                    <h1 class="mt-20 text-4xl max-w-md">Immersive experiences that deliver</h1>
+        <div class="absolute inset-0 text-white p-6 flex flex-col">
 
-                </div>
+            <nav class="flex justify-between items-center">
+                
+                <img src="./images/logo.svg" alt="logo">
+
+                <button class="md:hidden" id="mobileButton"><img src="./images/icon-hamburger.svg" alt=""></button>
+
+                <ul class="hidden md:flex gap-6">
+                    
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Support</a></li>
+                
+                </ul>
+
+            </nav>
+
+            <h1 class="absolute bottom-10 left-6 right-6 uppercase md:bottom-24 md:left-16 md:right-auto text-5xl md:text-7xl leading-tight border-2 border-white p-6 md:p-8 w-auto md:w-[650px]">
+                Immersive experiences that deliver
+            </h1>
+
+        </div>
+
     </header>
 
     <main>
 
-        <section class="mx-10 my-40">
+        <section class="mx-10 my-40 relative max-w-6xl mx-auto">
 
             <picture>
                 <source srcset="./images/desktop/image-interactive.jpg" media="(min-width:768px)">
-                <img src="./images/mobile/image-interactive.jpg">
+                <img class="w-full md:max-w-2xl" src="./images/mobile/image-interactive.jpg" alt="Interactive VR">
             </picture>
-            
-            <div class="flex flex-col justify-center">
+
+            <div class="bg-white p-8 mt-10 md:absolute md:bottom-0 md:right-0 md:w-[50%] md:translate-y-1/4 md:-translate-x-16">
                 
-                <h2 class="my-10 text-5xl text-center">The leader in interactive VR</h2>
-                <p class="text-xl text-center ">Founded in 2011, Loopstudios has been producing world-class virtual reality 
+                <h2 class="text-4xl md:text-5xl font-light uppercase leading-tight text-center md:text-left">The leader in interactive VR</h2>
+
+                <p class="mt-6 text-gray-500 text-lg text-center md:text-left">
+                    Founded in 2011, Loopstudios has been producing world-class virtual reality 
                     projects for some of the best companies around the globe. Our award-winning 
                     creations have transformed businesses through digital experiences that bind 
                     to their brand.
@@ -59,103 +73,200 @@
 
         </section>
 
-        <section class="max-w-6xl mx-auto grid gap-6 grid-cols-1 md:grid-cols-2 [grid-template-areas:'title''grid''button'] md:[grid-template-areas:'title_button''grid_grid']">
+        <section class="max-w-7xl mx-8 md:mx-auto grid gap-6 grid-cols-1 md:grid-cols-2 md:p-10 [grid-template-areas:'title''grid''button'] md:[grid-template-areas:'title_button''grid_grid']">
+            
+            <div class="flex justify-start max-md:justify-center">
+                
+                <h2 class="[grid-area:title] text-3xl uppercase"> Our creations</h2>
 
-            <h2 class="[grid-area:title] text-3xl"> Our creations</h2>
+            </div>
                 
             <div class="[grid-area:grid] grid grid-cols-1 md:grid-cols-4 gap-6">
-                <article>
-                    <picture>
+                
+                <article class="grid">
+
+                    <picture class="col-start-1 row-start-1">
                         <source srcset="./images/desktop/image-deep-earth.jpg" media="(min-width:768px)">
-                        <img src="./images/mobile/image-deep-earth.jpg">
+                        <img class="w-full h-full object-cover" src="./images/mobile/image-deep-earth.jpg">
                     </picture>
-                    <p>Deep earth</p>
+                    
+                    <div class="col-start-1 row-start-1 bg-gradient-to-r md:bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                    <div class="col-start-1 row-start-1 flex flex-col justify-end h-full p-4 pb-10 md:pb-16 md:items-center lg:items-start">
+                        <p class="text-white text-2xl md:text-2xl lg:4xl max-md:w-[120px] uppercase leading-tight ml-4 md:ml-0">
+                            Deep earth
+                        </p>
+
+                    </div>
+
                 </article>
 
-                <article>
-                    <picture>
+                <article class="grid  ">
+
+                    <picture class="col-start-1 row-start-1">
                         <source srcset="./images/desktop/image-night-arcade.jpg" media="(min-width:768px)">
-                        <img src="./images/mobile/image-night-arcade.jpg">
+                        <img class="w-full h-full object-cover" src="./images/mobile/image-night-arcade.jpg">
                     </picture>
-                    <p>Night arcade</p>
+                    
+                    <div class="col-start-1 row-start-1 bg-gradient-to-r md:bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                    <div class="col-start-1 row-start-1 flex flex-col justify-end h-full p-4 pb-10 md:pb-16 md:items-center lg:items-start">
+                        
+                        <p class="text-white text-2xl md:text-2xl lg:4xl max-md:w-[150px] uppercase leading-tight ml-4 md:ml-0">Night arcade</p>
+
+                    </div>    
+                    
+                
                 </article>
 
-                <article>
-                    <picture>
+                <article class="grid ">
+
+                    <picture class="col-start-1 row-start-1">
                         <source srcset="./images/desktop/image-soccer-team.jpg" media="(min-width:768px)">
-                        <img src="./images/mobile/image-soccer-team.jpg">
+                        <img class="w-full h-full object-cover" src="./images/mobile/image-soccer-team.jpg">
                     </picture>
-                    <p>Soccer team VR</p>
+                    
+                    <div class="col-start-1 row-start-1 bg-gradient-to-r md:bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                    <div class="col-start-1 row-start-1 flex flex-col justify-end h-full p-4 pb-10 md:pb-16 md:items-center lg:items-start">
+
+                        <p class="text-white text-2xl md:text-2xl lg:4xl max-md:w-[150px] uppercase leading-tight ml-4 md:ml-0">Soccer team VR</p>
+                    
+                    </div>
+
                 </article>
 
-                <article>
-                    <picture>
+                <article class="grid">
+
+                    <picture class="col-start-1 row-start-1">
                         <source srcset="./images/desktop/image-grid.jpg" media="(min-width:768px)">
-                        <img src="./images/mobile/image-grid.jpg">
+                        <img class="w-full h-full object-cover" src="./images/mobile/image-grid.jpg">
                     </picture>
-                    <p>The grid</p>
+
+                    <div class="col-start-1 row-start-1 bg-gradient-to-r md:bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                    <div class="col-start-1 row-start-1 flex flex-col justify-end h-full p-4 pb-10 md:pb-16 md:items-center lg:items-start">
+                        
+                        <p class="text-white text-2xl md:text-2xl lg:4xl max-md:w-[100px] uppercase leading-tight ml-4 md:ml-0">The grid</p>
+
+                    </div>
                 </article>
 
-                <article>
-                    <picture>
+                <article class="grid ">
+
+                    <picture class="col-start-1 row-start-1">
                         <source srcset="./images/desktop/image-from-above.jpg" media="(min-width:768px)">
-                        <img src="./images/mobile/image-from-above.jpg">
+                        <img class="w-full h-full object-cover" src="./images/mobile/image-from-above.jpg">
                     </picture>
-                    <p>From up above VR</p>
+                    
+                    <div class="col-start-1 row-start-1 bg-gradient-to-r md:bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                    
+                    <div class="col-start-1 row-start-1 flex flex-col justify-end h-full p-4 pb-10 md:pb-16 md:items-center lg:items-start">
+                        
+                        <p class="text-white text-2xl md:text-2xl lg:4xl max-md:w-[150px] uppercase leading-tight ml-4 md:ml-0">From up above VR</p>
+
+                    </div>
+
                 </article>
                 
-                <article>
-                    <picture>
+                <article class="grid bg-red-500">
+
+                    <picture class="col-start-1 row-start-1">
                         <source srcset="./images/desktop/image-pocket-borealis.jpg" media="(min-width:768px)">
-                        <img src="./images/mobile/image-pocket-borealis.jpg">
+                        <img class="w-full h-full object-cover" src="./images/mobile/image-pocket-borealis.jpg">
                     </picture>
-                    <p>Pocket borealis</p>
+                    
+                    <div class="col-start-1 row-start-1 bg-gradient-to-r md:bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                    <div class="col-start-1 row-start-1 flex flex-col justify-end h-full p-4 pb-10 md:pb-16 md:items-center lg:items-start">
+                        
+                        <p class="text-white text-2xl md:text-2xl lg:4xl max-md:w-[150px] uppercase leading-tight ml-4 md:ml-0">Pocket Borealis</p>
+
+                    </div>    
+                    
+                
                 </article>
 
-                <article>
-                    <picture>
+                <article class="grid bg-red-500">
+
+                    <picture class="col-start-1 row-start-1">
                         <source srcset="./images/desktop/image-curiosity.jpg" media="(min-width:768px)">
-                        <img src="./images/mobile/image-curiosity.jpg">
+                        <img class="w-full h-full object-cover" src="./images/mobile/image-curiosity.jpg">
                     </picture>
-                    <p>The curiosity</p>
+                    
+                    <div class="col-start-1 row-start-1 bg-gradient-to-r md:bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                    <div class="col-start-1 row-start-1 flex flex-col justify-end h-full p-4 pb-10 md:pb-16 md:items-center lg:items-start">
+                        
+                        <p class="text-white text-2xl md:text-2xl lg:4xl max-md:w-[150px] uppercase leading-tight ml-4 md:ml-0">The curiosity</p>
+
+                    </div>    
+                    
+                
                 </article>
 
-                <article>
-                    <picture>
+                <article class="grid  ">
+
+                    <picture class="col-start-1 row-start-1">
                         <source srcset="./images/desktop/image-fisheye.jpg" media="(min-width:768px)">
-                        <img src="./images/mobile/image-fisheye.jpg">
+                        <img class="w-full h-full object-cover" src="./images/mobile/image-fisheye.jpg">
                     </picture>
-                    <p>Make it fisheye</p>
+                    
+                    <div class="col-start-1 row-start-1 bg-gradient-to-r md:bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+                    <div class="col-start-1 row-start-1 flex flex-col justify-end h-full p-4 pb-10 md:pb-16 md:items-center lg:items-start">
+                        
+                        <p class="text-white text-2xl md:text-2xl lg:4xl max-md:w-[150px] uppercase leading-tight ml-4 md:ml-0">Make it fisheye</p>
+
+                    </div>
+
                 </article>
+
             </div>
 
-            <button class="[grid-area:button] md:justify-self-end"> See all</button>
+            <button class="[grid-area:button] justify-self-center md:justify-self-end uppercase border-2 border-black tracking-[0.2em] px-8 py-3 text-3xl md:text-md hover:bg-black hover:text-white transition font-bold">
+                See all
+            </button>
+
         </section>
+
     </main>
 
-    <footer class="bg-black grid grid-cols-1 justify-items-center lg:grid-cols-2">
-        
-        <div class="">
-            <img src="./images/logo.svg">
-            <ul>
-                <li><a href="#" class="text-white">About</a></li>
-                <li><a href="#" class="text-white">Careers</a></li>
-                <li><a href="#" class="text-white">Events</a></li>
-                <li><a href="#" class="text-white">Products</a></li>
-                <li><a href="#" class="text-white">Support</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul class="flex flex-row">
-                <li><a href="https://facebook.com"><img class="bg-white-950" src="./images/icon-facebook.svg"></a></li>
-                <li><a href="https://x.com"><img src="./images/icon-twitter.svg"></a></li>
-                <li><a href="https://pinterest.com"><img src="./images/icon-pinterest.svg"></a></li>
-                <li><a href="https://instagram.com"><img src="./images/icon-instagram.svg"></a></li>
-            </ul>
+    <footer class="bg-black text-white px-6 py-10 md:mt-80">
 
-            <p> © 2021 Loopstudios. All rights reserved.</p>
-        </div>
+        <div class="max-w-6xl mx-auto grid gap-8 text-center lg:text-left lg:grid-cols-2 lg:grid-rows-2">
+
+            <div class="flex justify-center lg:justify-start items-center lg:col-start-1 lg:row-start-1">
+
+                <img src="./images/logo.svg" alt="Loopstudios">
+
+            </div>
+
+            
+            <ul class="flex flex-col gap-4 items-center lg:items-start lg:flex-row lg:gap-6 lg:col-start-1 lg:row-start-2">
+                
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Support</a></li>
+                
+            </ul>
+            
+            <div class="flex justify-center lg:justify-end items-center gap-4 lg:col-start-2 lg:row-start-1">
+
+                <a href="#"><img src="./images/icon-facebook.svg"></a>
+                <a href="#"><img src="./images/icon-twitter.svg"></a>
+                <a href="#"><img src="./images/icon-pinterest.svg"></a>
+                <a href="#"><img src="./images/icon-instagram.svg"></a>
+
+            </div>
+            
+            <p class="text-gray-400 text-sm text-center lg:text-right">© 2021 Loopstudios. All rights reserved.</p>
+
+    </div>
+
     </footer>
-  
+  <script src="./script.js"></script>
 </body>
 </html>
